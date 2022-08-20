@@ -1,0 +1,165 @@
+
+.nav
+{
+    position: relative;
+    padding: 15px;
+}
+.nav ul
+{
+    position: relative;
+    text-align: center;
+}
+.nav ul li
+{
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+}
+.nav ul li a
+{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 500Ms ease-in-out;
+}
+.nav ul li a.logo
+{
+    font-weight: 900;
+    font-style: 2rem;
+}
+.nav ul li a:before
+{
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #1F7A8C, #BFDBF7);
+    opacity: 0;
+    transition: all 500Ms ease-in-out;
+}
+.nav ul li a:hover:before,
+.nav ul li a.active:before
+{
+    opacity: 1;
+}
+
+body
+{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(275deg, hsla(196, 93%, 12%, 1) 0%, hsla(190, 64%, 34%, 1) 100%);
+
+}
+.container
+{
+    padding: 2rem;
+    padding-bottom: 400px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.top-section
+{
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline
+{
+    position: relative;
+    min-height: 150px;
+}
+
+.line
+{
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 1px);
+    width: 2px;
+    top: -50px;
+    bottom: -50px;
+    background-color: #000;
+    display: none;
+}
+
+.line:before,
+.line:after
+{
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line:after
+{
+    bottom: 0;
+}
+
+.section
+{
+    display: flex;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: 50px 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    min-height: 300px;
+}
+
+.section:nth-child(odd)
+{
+    flex-direction: row-reverse;
+    transform: translateX(100%);
+}
+
+.bead
+{
+    position: absolute;
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #000;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.content
+{
+    width: calc(50% - 2rem);
+}
+
+.show-me:nth-child(n)
+{
+    transform: none;
+    opacity: 1;
+}
+h1
+{
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
